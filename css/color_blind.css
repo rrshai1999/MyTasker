@@ -1,0 +1,39 @@
+/*CHANGES COLOUR OF WEBPAGE*/
+#background {
+	background-color: #e6e6e6;
+	font-family: SF Pro Display;
+	margin: auto;
+	width: 100%;
+	font-size: 100%;
+}
+
+/*CALENDAR SCHEME*/
+.today_date {
+	background-color: #333333;
+	color: #FFFFFF;
+}
+.calendar table {
+	border: 1px solid black;
+	padding: 10px;
+	background-color: inherit;
+	
+}
+.calendar td {
+	background-color: silver;
+	border: 1px solid black;
+	padding: 10px;
+}
+.calendar th {
+	background-color: white;
+	border: 1px solid black;
+	padding: 10px;
+}
+.calendar td:hover {
+	background-color: grey;
+	color: #FFFFFF;
+}
+
+.checked button {
+	background-color: grey;
+	color: white;
+}

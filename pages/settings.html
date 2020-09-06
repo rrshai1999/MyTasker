@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html id="settings" class="hascalendar" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MySettings</title>
+    <script src="../jscript/accessability.js"></script>
+    <link id="pagestyle" rel="stylesheet" type="text/css" href="../css/default_layout.css">
+	<link id="colorPicker_css" rel="stylesheet" type="text/css" href="../css/color-picker.min.css">
+	<link id="pagestyle_override" rel="stylesheet" type="text/css" href="">
+</head>
+<header class="navigation">
+    <ul id="header">
+        <li><a href="../index.html"><img src="../icons/home.png"></a></li>
+        <li><a href="alltasks.html">MyTasks</a></li>
+        <li><a href="settings.html">MySettings</a></li>
+        <li>
+            <div class="dropdown">
+                <button id="dropdown-btn"><span>Choose colour scheme &#9660;</span></button>
+                <div class="dropdown-content">
+                    <a id="main-mode" href="javascript:void();" onclick="alreadyactive()">Default theme in use.</a>
+                    <a id="dyslexia" href="javascript:void();" onclick="dyslexic()">Set to dyslexic friendly mode.</a>
+                    <a id="color-blind" href="javascript:void();" onclick="color_blind()">Set to color-blind friendly mode.</a>
+					<a id="vibrant" href="javascript:void();" onclick="vibrant()">Set to vibrant mode.</a>
+          <a id="high_contrast" href="javascript:void();" onclick="high_contrast()">Set to high-contrast mode.</a>
+          <a id="reset" href="javascript:void();" onclick="reset_theme()">Reset to default.</a>
+                </div>
+            </div>
+        </li>
+    </ul>
+</header>
+<body id="background">
+<audio id="click" loop= "false" volume = "100">
+    <source src="../fx/click.mp3" type="audio/mpeg">
+</audio>
+<script src="../jscript/color-picker.min.js"></script>
+	<br/></br/>
+<br/></br/>
+	<div class="picture-section">
+		<img id="index_image" src="../images/index/man_working_at_computer.jpg">
+		<div id="index_picture_text">MySettings</div>
+	</div>
+	<br/></br/><br/><br/></br/>
+<div class="section-container">
+	<div class="left-section">
+		<img id="left_image" src="../images/settings/gears.png" alt="Mechanical gears turning.">
+	</div>
+	<div class="right-section">
+			<h1 id="about_section_title">About MySettings&nbsp;<button id="hint" onclick="settings_hint()">?</button></h1>
+			<div id="about_section">On this page, you can customise the colours of the website as you wish
+			<strong>(Not recommended for color-blind or dyslexic users)</strong>.
+			You can change the colour of the days of the calendar, header colour, background colour
+			and the colour of the text. You also have the option to change the day of the week
+			the calendar starts on. For convenience, the calendar is shown below.</div>
+		</div>
+</div>
+<br/></br/><br/><br/></br/>
+    <div class="section-container">
+		<div id="settings-section" class="left-section">
+            <div>
+				<form class="container" id="settings" method="post">
+				<h1>Settings</h1>
+				<div>
+					<star>*&nbsp;</star><label>Select Calendar Start Day:&nbsp;</label>
+					<select id="day_selection" required=true>
+						<option selected="selected" value="--">--</option>
+						<option value="Sat">Sat</option>
+						<option value="Sun">Sun</option>
+						<option value="Mon">Mon</option>
+					</select>
+				</div>
+				<br/>
+				<div>
+					<star>*&nbsp;</star><label>Select Background Colour:&nbsp;</label>
+					<input type="text" class="inp" id="colors_background">
+				</div>
+				<br/>
+				<div>
+					<star>*&nbsp;</star><label>Select Text Colour:&nbsp;</label>
+					<input type="text" class="inp" id="colors_text"/>
+				</div>
+				<br/>
+				<div>
+					<star>*&nbsp;</star><label>Select Header Colour:&nbsp;</label>
+					<input type="text" class="inp" id="colors_header"/>
+				</div>
+				<br/>
+				<div>
+					<star>*&nbsp;</star><label>Select Calendar Date Colour:&nbsp;</label>
+					<input type="text" class="inp" id="colors_cal_date"/>
+				</div>
+				<div>
+					<star>*&nbsp;</star><label>Select Calendar Header Colour:&nbsp;</label>
+					<input type="text" class="inp" id="colors_cal_header"/>
+				</div>
+				<div>
+					<button type="button" onclick="submit_settings()">Submit</button>&nbsp;
+				</div>
+			</form>
+            </div>
+        </div>
+        <div class="right-section">
+			<div class="calendar_arrows">
+				<img src="../icons/back.png" alt="Backwards Arrow" id="back" onclick="previous()">
+				<text class="month_day" id="monthAndYear"></text>
+				<img src="../icons/forward.png" alt="Forward Arrow" id="forth" onclick="next()">
+			</div>
+			<table class="calendar" id="calendar">
+				<tbody id="calendar-body"></tbody>
+			</table>
+			<br/>
+			<div class="calendar_buttons">
+				<button id="previous" onclick="previous()">Previous Month</button>
+				<button id="next" onclick="next()">Next Month</button>
+			</div>
+			<br/>
+			<form class="calendar_options">
+				<label class="" for="month">Jump To: </label>
+				<select class="" name="month" id="month" onchange="jump()">
+					<option value=0>Jan</option>
+					<option value=1>Feb</option>
+					<option value=2>Mar</option>
+					<option value=3>Apr</option>
+					<option value=4>May</option>
+					<option value=5>Jun</option>
+					<option value=6>Jul</option>
+					<option value=7>Aug</option>
+					<option value=8>Sep</option>
+					<option value=9>Oct</option>
+					<option value=10>Nov</option>
+					<option value=11>Dec</option>
+				</select>
+				<label for="year"></label>
+				<select class="" name="year" id="year" onchange="jump()">
+					<option value=1990>1990</option>
+					<option value=1991>1991</option>
+					<option value=1992>1992</option>
+					<option value=1993>1993</option>
+					<option value=1994>1994</option>
+					<option value=1995>1995</option>
+					<option value=1996>1996</option>
+					<option value=1997>1997</option>
+					<option value=1998>1998</option>
+					<option value=1999>1999</option>
+					<option value=2000>2000</option>
+					<option value=2001>2001</option>
+					<option value=2002>2002</option>
+					<option value=2003>2003</option>
+					<option value=2004>2004</option>
+					<option value=2005>2005</option>
+					<option value=2006>2006</option>
+					<option value=2007>2007</option>
+					<option value=2008>2008</option>
+					<option value=2009>2009</option>
+					<option value=2010>2010</option>
+					<option value=2011>2011</option>
+					<option value=2012>2012</option>
+					<option value=2013>2013</option>
+					<option value=2014>2014</option>
+					<option value=2015>2015</option>
+					<option value=2016>2016</option>
+					<option value=2017>2017</option>
+					<option value=2018>2018</option>
+					<option value=2019>2019</option>
+					<option value=2020>2020</option>
+					<option value=2021>2021</option>
+					<option value=2022>2022</option>
+					<option value=2023>2023</option>
+					<option value=2024>2024</option>
+					<option value=2025>2025</option>
+					<option value=2026>2026</option>
+					<option value=2027>2027</option>
+					<option value=2028>2028</option>
+					<option value=2029>2029</option>
+					<option value=2030>2030</option>
+				</select>
+			</form>
+        </div>
+    </div>
+	<script>
+	</script>
+	<script src="../jscript/settings_scripts.js"></script>
+    <script src="../jscript/calendar_scripts.js"></script>
+	<script src="../jscript/popup_scripts.js"></script>
+</body>
+
+</html>
+</html>

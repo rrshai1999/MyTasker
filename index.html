@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html id="homepage" class="hascalendar" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MyTasker Dashboard</title>
+  <script src="jscript/accessability.js"></script>
+  <script src="jscript/settings_scripts.js"></script>
+  <link id="pagestyle" rel="stylesheet" type="text/css" href="css/default_layout.css">
+  <link id="pagestyle_override" rel="stylesheet" type="text/css" href="">
+</head>
+<header class="navigation">
+  <ul id="header">
+    <li><a href="index.html"><img src="icons/home.png" alt="Home Page Button"></a></li>
+    <li><a href="pages/alltasks.html">MyTasks</a></li>
+    <li><a href="pages/settings.html">MySettings</a></li>
+    <li><a id="NewTask" href="pages/forms/newtask.html" onclick="checkSelection()">Add New Task</a></li>
+    <li>
+      <div class="dropdown">
+        <button id="dropdown-btn"><span>Choose colour scheme &#9660;</span></button>
+        <div class="dropdown-content">
+          <a id="main-mode" href="javascript:void();" onclick="alreadyactive()">Default theme in use.</a>
+          <a id="dyslexia" href="javascript:void();" onclick="dyslexic()">Set to dyslexic friendly mode.</a>
+          <a id="color-blind" href="javascript:void();" onclick="color_blind()">Set to color-blind friendly mode.</a>
+		  <a id="vibrant" href="javascript:void();" onclick="vibrant()">Set to vibrant mode.</a>
+          <a id="high_contrast" href="javascript:void();" onclick="high_contrast()">Set to high-contrast mode.</a>
+          <a id="reset" href="javascript:void();" onclick="reset_theme()">Reset to default.</a>
+        </div>
+      </div>
+    </li>
+  </ul>
+</header>
+<audio id="click" loop="false" volume="100">
+  <source src="fx/click.mp3" type="audio/mpeg">
+  </audio>
+  <body id="background">
+    <br/></br/>
+    <div class="picture-section">
+      <img id="index_image" src="images/index/man_working_at_computer.jpg">
+      <div id="index_picture_text">Welcome to MyTasker!</div>
+    </div>
+    <br/></br/><br/><br/></br/>
+    <div class="section-container">
+      <div id="about_section_calendar" class="left-section">
+        <div class="calendar_arrows"><img src="icons/back.png" alt="Backwards Arrow" id="back" onclick="previous()">
+          <text class="month_day" id="monthAndYear"></text><img src="icons/forward.png" alt="Forward Arrow" id="forth" onclick="next()">
+        </div>
+        <table class="calendar" id="calendar">
+          <tbody id="calendar-body"></tbody>
+        </table>
+        <br/>
+        <div class="calendar_buttons">
+          <button id="previous" onclick="previous()">Previous Month</button>
+          <button id="next" onclick="next()">Next Month</button>
+        </div>
+        <br/>
+        <form class="calendar_options">
+          <label class="" for="month">Jump To: </label>
+          <select class="" name="month" id="month" onchange="jump()">
+            <option value=0>Jan</option>
+            <option value=1>Feb</option>
+            <option value=2>Mar</option>
+            <option value=3>Apr</option>
+            <option value=4>May</option>
+            <option value=5>Jun</option>
+            <option value=6>Jul</option>
+            <option value=7>Aug</option>
+            <option value=8>Sep</option>
+            <option value=9>Oct</option>
+            <option value=10>Nov</option>
+            <option value=11>Dec</option>
+          </select>
+          <label for="year"></label>
+          <select class="" name="year" id="year" onchange="jump()">
+            <option value=1990>1990</option>
+            <option value=1991>1991</option>
+            <option value=1992>1992</option>
+            <option value=1993>1993</option>
+            <option value=1994>1994</option>
+            <option value=1995>1995</option>
+            <option value=1996>1996</option>
+            <option value=1997>1997</option>
+            <option value=1998>1998</option>
+            <option value=1999>1999</option>
+            <option value=2000>2000</option>
+            <option value=2001>2001</option>
+            <option value=2002>2002</option>
+            <option value=2003>2003</option>
+            <option value=2004>2004</option>
+            <option value=2005>2005</option>
+            <option value=2006>2006</option>
+            <option value=2007>2007</option>
+            <option value=2008>2008</option>
+            <option value=2009>2009</option>
+            <option value=2010>2010</option>
+            <option value=2011>2011</option>
+            <option value=2012>2012</option>
+            <option value=2013>2013</option>
+            <option value=2014>2014</option>
+            <option value=2015>2015</option>
+            <option value=2016>2016</option>
+            <option value=2017>2017</option>
+            <option value=2018>2018</option>
+            <option value=2019>2019</option>
+            <option value=2020>2020</option>
+            <option value=2021>2021</option>
+            <option value=2022>2022</option>
+            <option value=2023>2023</option>
+            <option value=2024>2024</option>
+            <option value=2025>2025</option>
+            <option value=2026>2026</option>
+            <option value=2027>2027</option>
+            <option value=2028>2028</option>
+            <option value=2029>2029</option>
+            <option value=2030>2030</option>
+          </select>
+        </form>
+      </div>
+      <div class="right-section">
+        <h1 id="about_section_title">About MyTasker&nbsp;<button id="hint" onclick="index_hint()">?</h1></button>
+        <div id="about_section">
+          Have you ever found advice from here, there and everywhere
+          that fails to help you keep organised? Well,
+          MyTasker is meant to do just that giving <strong>you</strong> that
+          control. Here, you can create a new task from the header above or
+		  select a date from the calendar to make a new task on that date.
+        </div>
+      </div>
+    </div>
+	<script src="jscript/popup_scripts.js"></script>
+    <script src="jscript/calendar_scripts.js"></script>
+    <br/>
+    <br/>
+  </body>
+
+  </html>

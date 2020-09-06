@@ -1,0 +1,57 @@
+#background {
+	background-color: #000000;
+	font-family: SF Pro Display;
+	color: #ffff00;
+	margin: auto;
+	width: 100%;
+}
+
+/*CALENDAR SCHEME*/
+.calendar table {
+	border: 1px solid black;
+	padding: 10px;
+	background-color: #ffffff;
+}
+.calendar td {
+	background-color: #ff00ff;
+	border: 1px solid black;
+	padding: 10px;
+}
+.calendar th {
+	background-color: #333333;
+	border: 1px solid black;
+	padding: 10px;
+}
+.calendar td:hover {
+	background-color: #ebf7c0;
+	color: #000000;
+}
+
+#dropdown-btn span, #dropdown-tasks span {
+	filter: invert(100%);
+}
+
+#back, #forth {
+	filter: invert(100%);
+}
+
+#homepage input, #new_task input, #alltasks input, #view_task input, textarea, button, select, option {
+	filter: invert(100%);
+}
+
+.container {
+	background-color: inherit;
+}
+
+.today_date {
+	background-color: #46614d;
+}
+
+#header {
+	background-color: #FF00FF;
+	color: #000000;
+}
+
+#dropdown-btn {
+	color: white;
+}

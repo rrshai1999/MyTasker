@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html id="homepage" class="hascalendar" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Error</title>
+    <script src="../../jscript/accessability.js"></script>
+	<script src="../../jscript/settings_scripts.js"></script>
+    <link id="pagestyle" rel="stylesheet" type="text/css" href="../../css/default_layout.css">
+    <link id="pagestyle_override" rel="stylesheet" type="text/css" href="">
+</head>
+<header class="navigation">
+    <ul id="header">
+        <li><a href="../../index.html"><img src="../../icons/home.png" alt="Home Page Button"></a></li>
+        <li><a href="../alltasks.html">MyTasks</a></li>
+        <li><a href="../settings.html">MySettings</a></li>
+		<li>
+            <div class="dropdown">
+                <button id="dropdown-btn"><span>Choose colour scheme &#9660;</span></button>
+                <div class="dropdown-content">
+                    <a id="main-mode" href="javascript:void();" onclick="alreadyactive()">Default theme in use.</a>
+                    <a id="dyslexia" href="javascript:void();" onclick="dyslexic()">Set to dyslexic friendly mode.</a>
+                    <a id="color-blind" href="javascript:void();" onclick="color_blind()">Set to color-blind friendly mode.</a>
+					<a id="vibrant" href="javascript:void();" onclick="vibrant()">Set to vibrant mode.</a>
+          <a id="high_contrast" href="javascript:void();" onclick="high_contrast()">Set to high-contrast mode.</a>
+          <a id="reset" href="javascript:void();" onclick="reset_theme()">Reset to default.</a>
+				</div>
+            </div>
+        </li>
+    </ul>
+</header>
+    <audio id="click" loop="false" volume="100">
+        <source src="../../fx/click.mp3" type="audio/mpeg">
+    </audio>
+<body id="background">
+	<br/></br/>
+	<div class="picture-section">
+		<img id="index_image" src="../../images/index/man_working_at_computer.jpg">
+		<div id="index_picture_text">Task not found. Please choose an option below.</div>
+	</div>
+	<br/></br/><br/><br/></br/>
+	<div class="button-container">
+		<a href="../forms/newtask.html" onclick="checkSelection()"><button>Add New Task</button></a>
+		<a href="../alltasks.html"><button>View MyTasks</button></a>
+		<a href="../settings.html"><button>View MySettings</button></a>
+	</div>
+    <script src="../../jscript/calendar_scripts.js"></script>
+    <script src="../../jscript/popup_scripts.js"></script>
+    <br/>
+    <br/>
+</body>
+
+</html>

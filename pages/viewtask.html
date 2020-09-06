@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html id="view_task" lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MyTask</title>
+<script src="../jscript/accessability.js"></script>
+<script src="../jscript/settings_scripts.js"></script>
+<link id="pagestyle" rel="stylesheet" type="text/css" href="../css/default_layout.css">
+<link id="pagestyle_override" rel="stylesheet" type="text/css" href="">
+</head>
+<header class="navigation">
+<ul id="header">
+	<li><a href="../index.html"><img src="../icons/home.png"></a></li>
+	<li><a href="alltasks.html">MyTasks</a></li>
+	<li><a href="settings.html">MySettings</a></li>
+	<li>
+		<div class="dropdown">
+			<button id="dropdown-btn"><span>Choose colour scheme &#9660;</span></button>
+			<div class="dropdown-content">
+				<a id="main-mode" href="javascript:void();" onclick="alreadyactive()">Default theme in use.</a>
+				<a id="dyslexia" href="javascript:void();" onclick="dyslexic()">Set to dyslexic friendly mode.</a>
+				<a id="color-blind" href="javascript:void();" onclick="color_blind()">Set to color-blind friendly mode.</a>
+				<a id="vibrant" href="javascript:void();" onclick="vibrant()">Set to vibrant mode.</a>
+          <a id="high_contrast" href="javascript:void();" onclick="high_contrast()">Set to high-contrast mode.</a>
+          <a id="reset" href="javascript:void();" onclick="reset_theme()">Reset to default.</a>
+			</div>
+		</div>
+	</li>
+</ul>
+</header>
+<body id="background">
+<audio id="click" loop= "false" volume = "100">
+<source src="../fx/click.mp3" type="audio/mpeg">
+</audio>
+<br/></br/>
+<div class="picture-section">
+	<img id="index_image" src="../images/index/man_working_at_computer.jpg">
+	<div id="index_picture_text">View Task</div>
+</div>
+<br/></br/><br/><br/></br/>
+<div class="section-container">
+<div class="left-section">
+<div class="container">
+	<h1>Task Details&nbsp;<button id="hint" onclick="view_task_hint()">?</button></h1>
+	<br/><button id="edit_btn">Edit This Task</button>&emsp;<button id="return">Go Back</button>
+</div>
+	<form class="container" id="edit_task" method="post" action="">
+		<div class="row">
+			<star>*&nbsp;</star><label>Task Name:&nbsp;</label>
+			<input type="text" name="task_name" id="task_name" required=true placeholder="Enter task name here..." readonly/>
+		</div><br/>
+		<div class="row">
+			<label>&nbsp;&nbsp;&nbsp;Task Type:&nbsp;</label>&nbsp;&nbsp;&nbsp;
+			<select id="task-type" disabled>
+				<option selected="selected">Unassigned</option>
+				<option value="Leisure">Leisure</option>
+				<option value="Work">Work</option>
+				<option value="Pleasure">Pleasure</option>
+			</select>
+		</div><br/>
+		<div class="row">
+			<star>*&nbsp;</star><label>Task Priority:&nbsp;</label>
+			<select id="priority-selection" required=true disabled>
+				<option selected="selected">--</option>
+				<option value="least">Lowest</option>
+				<option value="low">Low</option>
+				<option value="normal">Moderate</option>
+				<option value="higher">High</option>
+				<option value="most">Urgent</option>
+			</select>
+		</div><br/>
+		<div class="row">
+			<star>*&nbsp;</star><label>Due Date of Task:&nbsp;</label>
+			<input type="date" id="task_date" required=true readonly/>
+		</div><br/>
+		<div class="row">
+				<label>&nbsp;&nbsp;&nbsp;Task Completion Time:&nbsp;</label>&nbsp;&nbsp;&nbsp;
+				<input type="time" id="task_time" readonly>
+			</div><br/>
+		<div class="row">
+			<star>*&nbsp;</star><label>Task Description:&nbsp;</label>
+			<textarea name="task_text" id="task_text" cols="50" rows="10" maxlength="500" required=true placeholder="Enter task description here..." readonly></textarea>
+		</div><br/>
+	</form>
+</div>
+<div class="right-section">
+<div class="container">
+	<h1 id="subtask_title">Sub-task list</h1>
+	<input type="text" id="subtask_to_add" placeholder="Subtasks below..." disabled>
+	<ul id="tasklist"></ul>
+</div>
+</div>
+</div>
+<script src="../jscript/newtask_scripts.js"></script>
+<script src="../jscript/edittask_scripts.js"></script>
+<script src="../jscript/viewtask_scripts.js"></script>
+<script src="../jscript/popup_scripts.js"></script>
+		</div>
+	</div>
+</div>
+</body>
+</html>

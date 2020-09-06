@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" id="alltasks">
+<head>
+    <meta charset="UTF-8">
+    <title>MyTasks</title>
+	<script src="../jscript/settings_scripts.js"></script>
+    <script src="../jscript/accessability.js"></script>
+    <link id="pagestyle" rel="stylesheet" type="text/css" href="../css/default_layout.css">
+	<link id="pagestyle_override" rel="stylesheet" type="text/css" href="">
+</head>
+<header class="navigation">
+    <ul id="header">
+        <li><a href="../index.html"><img src="../icons/home.png"></a></li>
+        <li><a href="alltasks.html">MyTasks</a></li>
+        <li><a href="settings.html">MySettings</a></li>
+		<li><a href="forms/newtask.html" id="NewTask" onclick="checkSelection()">Add New Task</a></li>
+        <li>
+            <div class="dropdown">
+                <button id="dropdown-btn"><span>Choose colour scheme &#9660;</span></button>
+                <div class="dropdown-content">
+                    <a id="main-mode" href="javascript:void();" onclick="alreadyactive()">Default theme in use.</a>
+                    <a id="dyslexia" href="javascript:void();" onclick="dyslexic()">Set to dyslexic friendly mode.</a>
+                    <a id="color-blind" href="javascript:void();" onclick="color_blind()">Set to color-blind friendly mode.</a>
+					<a id="vibrant" href="javascript:void();" onclick="vibrant()">Set to vibrant mode.</a>
+          <a id="high_contrast" href="javascript:void();" onclick="high_contrast()">Set to high-contrast mode.</a>
+          <a id="reset" href="javascript:void();" onclick="reset_theme()">Reset to default.</a>
+                </div>
+            </div>
+        </li>
+		<li>
+            <div class="dropdown">
+                <button id="dropdown-tasks"><span>Choose Sorting Method &#9660;</span></button>
+					<div class="dropdown-content">
+						<a id="name_order" href="javascript:void();" onclick="Name()">Task name.</a>
+						<a id="date_order" href="javascript:void();" onclick="date()">Task due date.</a>
+						<a id="priority_order" href="javascript:void();" onclick="Priority()">Task priority</a>
+				</div>
+            </div>
+		</li>
+    </ul>
+</header>
+<body id="background">
+<audio id="click" loop= "false" volume = "100">
+    <source src="../fx/click.mp3" type="audio/mpeg">
+</audio>
+	<br/></br/>
+	<div class="picture-section">
+		<img id="index_image" src="../images/index/man_working_at_computer.jpg">
+		<div id="index_picture_text">MyTasks</div>
+	</div>
+	<br/></br/><br/><br/></br/>
+	<div class="section-container">
+        <div id="all_tasks_holder" class="left-section">
+			<h1 id="task_count">Task List</h1>
+			<div id="all_task_list">
+			</div>
+			<br/></br/><br/><br/></br/>
+			<div class="button-container">
+				<button href="javascript:void();" id="DeleteSelectedTasks" onclick="delete_tasks_selected()">Delete Selected Task(s)</button>
+				<button href="javascript:void();" id="DeleteAllTasks" onclick="delete_all_tasks()">Delete All Tasks</button>
+			</diV>
+		</div>
+		<div class="right-section">
+			<h1 id="about_section_title">About MyTasks&nbsp;<button id="hint" onclick="message('MyTasks','&check; - Selects a task that could be deleted.\n\n Add New Task - Allows you to create a new task.\n\n\Edit Task - Allows you to make changes to a task already in MyTasker.\n\nView Task - Allows you to view information on a task already in MyTasker.\n\nDelete Selected Task(s) - Allows you to delete tasks that are selected.\n\nDelete All Tasks - Allows you to delete every task currently stored in MyTasker.\n\n Choose sorting method &#9660; - Allows you to sort existing tasks by their name, date or priority.')">?</button></h1>
+			<div id="about_section">On this page, you can view all of the tasks that you have created
+			and sort them by <strong>name</strong>, <strong>date</strong> or <strong>title</strong>,
+			remove tasks that are either complete or no longer needed and edit the tasks where
+			you want to change any information. Below you will find the task list and you may choose
+			how to sort the tasks using the header.</div>
+        </div>
+	</div>
+	<script src="../jscript/popup_scripts.js"></script>
+	<script src="../jscript/alltask_scripts.js"></script>
+</body>
+</html>

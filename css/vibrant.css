@@ -1,0 +1,36 @@
+#background {
+	background-color: #fffcd1;
+	font-family: SF Pro Display;
+	color: #00078f;
+	margin: auto;
+	width: 100%;
+}
+
+/*CALENDAR SCHEME*/
+.calendar table {
+	border: 1px solid black;
+	padding: 10px;
+	background-color: #ffffed;
+}
+.calendar td {
+	background-color: #51edc3;
+	border: 1px solid black;
+	padding: 10px;
+}
+.calendar th {
+	background-color: #c1b9ca;
+	border: 1px solid black;
+	padding: 10px;
+}
+.calendar td:hover {
+	background-color: #ebf7c0;
+	color: #000000;
+}
+
+.today_date {
+	background-color: #46614d;
+}
+
+#header {
+	background-color: #ad4ba4;
+}

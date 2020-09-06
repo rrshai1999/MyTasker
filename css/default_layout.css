@@ -1,0 +1,418 @@
+#background {
+	font-family: SF Pro Display;
+	margin: auto;
+	width: 100%;
+	font-size: 100%;
+	background-color: #FFFFFF;
+}
+
+/*
+Below, this CSS has not been overwritten by alternative style sheets.
+*/
+
+/*BUTTONS AND TEXT*/
+button, input[type=reset], input[type=submit] {
+	font-size: 150%
+}
+@font-face {
+	font-family: 'SF Pro Display';
+	src: url("../fonts/SFProDisplay-Regular.ttf");
+}
+text.month_day {
+	font-size: 200%;
+}
+
+.tutorials {
+	font-size: 200%;
+	color: inherit;
+}
+
+.tutorials:hover {
+	color: white;
+}
+
+/*POP-UPs*/
+
+.popup {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%) scale(0);
+	border: 1px solid black;
+	border-radius: 5px;
+	z-index: 10;
+	background-color: inherit;
+	width: 400px;
+	max-width: 60%;
+}
+.popup.active {
+	transform: translate(-50%,-50%) scale(1);
+}
+.popup #popup-header {
+	padding: 10px 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid black;
+}
+.popup #popup-title {
+	font-size: 125%;
+	font-weight: bold;
+}
+.popup #popup-close {
+	cursor: pointer;
+	border: none;
+	outline: none;
+	background: none;
+	font-size: 125%;
+	font-weight: bold;
+}
+.popup-buttons {
+	padding: 10px 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid black;
+}
+
+.button-container {
+	padding: 10px 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.popup-buttons #popup-confirm, #popup-cancel {
+	outline: none;
+}
+.popup #popup-body {
+	padding: 10px 15px;
+}
+#overlay {
+	position: fixed;
+	opacity: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0, .5);
+	pointer-events: none;
+}
+#overlay.active {
+	opacity: 1;
+	pointer-events: all;
+}
+
+/*ALL TASKS*/
+
+#left_image {
+	padding: 10px;
+}
+
+#doc_image {
+	padding: 100px;
+}
+
+#all_task_list {
+	list-style-type: none;
+}
+#all_task_list li {
+	font-size: 115%;
+	padding-left: 20px;
+}
+.checked button {
+	background-color: #94f29f;
+}
+.unchecked button {
+	background-color: inherit;
+}
+
+.add_task {
+	-webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.add_task #task_description {
+	width: 200px;
+	height: 100px;
+}
+#tasklist {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 150%;
+	list-style-type: none;
+}
+star {
+	color: red;
+	text-align: center;
+}
+#task_count {
+	padding-left: 50px;
+}
+
+/*CALENDAR SCHEME*/
+.calendar {
+	margin: auto;
+	text-align: center;
+	align-items: center;
+	border: 1px solid black;
+}
+.today_date {
+	background-color: #FFFF00;
+	color: #FFFFFF;
+}
+.calendar table {
+	border: 1px solid black;
+	padding: 10px;
+	background-color: inherit;
+}
+.calendar td {
+	background-color: red;
+	border: 1px solid black;
+	padding-left: 10px;
+	padding-right: 10px;
+	width: 80px;
+	height: 80px;
+	font-size: 100%;
+}
+.calendar th {
+	background-color: white;
+	border: 1px solid black;
+	padding: 10px;
+	font-size: 100%;
+}
+.calendar td:hover {
+	background-color: blue;
+	color: #FFFFFF;
+}
+.calendar_buttons {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.calendar_options {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.calendar_arrows {
+	padding: 10px 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/*SECTIONS*/
+.section-container {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.picture-section {
+	overflow: hidden;
+	align-items: center;
+	width: 100%;
+	height: 500px;
+	position: relative;
+	text-align: center;
+	z-index: -3;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+#about_section {
+	width: auto;
+	font-size: 150%;
+	padding-left: 100px;
+	padding-right: 100px;
+	padding-bottom: 20px;
+}
+#about_section_title {
+	padding-left: 100px;
+	padding-right: 100px;
+}
+#index_image {
+	opacity: 0.5;
+}
+#index_picture_text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 500%;
+}
+.right-section {
+	overflow: hidden;
+	align-items: center;
+	width: 60%;
+	padding: 20px 20px 20px 30px;
+}
+.left-section {
+	overflow: hidden;
+	align-items: center;
+	width: 60%;
+	padding: 20px 20px 20px 30px;
+}
+
+/*HEADER*/
+#header {
+	list-style-type: none;
+	overflow: hidden;
+	background-color: #333333;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+#header li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 16px;
+	text-decoration: none;
+}
+#header li a:hover {
+	background-color: grey;
+}
+#header .dropdown button:hover {
+	background-color: grey;
+}
+
+/*DROPDOWNS*/
+.dropdown {
+	float: left;
+	overflow: hidden;
+}
+.dropdown #dropdown-btn {
+	border: none;
+	outline: none;
+	color: white;
+	padding: 15px 15px;
+	background-color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	margin: 0;
+}
+
+.dropdown #dropdown-tasks {
+	border: none;
+	outline: none;
+	color: white;
+	padding: 15px 15px;
+	background-color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	margin: 0;
+}
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: silver;
+	min-width: 180px;
+	box-shadow: 0px 16px 16px 0px;
+}
+.dropdown-content a:hover {
+	background-color: grey;
+}
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+/*FORM CSS*/
+#subtask_title {
+	padding-left: 40px;
+}
+#subtask_to_add {
+	padding-left: 40px;
+}
+#add_task, #edit_task {
+	padding-left: 80px;
+}
+* {
+  box-sizing: border-box;
+}
+input[type=text], input[type=date], input[type=time], select, textarea {
+  width: 50%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  font-size: 150%;
+}
+label {
+  padding: 12px 12px 12px 0;
+  width: 30%;
+  display: inline-block;
+}
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .section-container .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+/*HINT BUBBLES*/
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
