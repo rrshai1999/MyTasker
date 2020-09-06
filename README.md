@@ -5,7 +5,7 @@ arising from these tasks. The difference is that it’s only for one, not just f
 your way is the only way and everything else is “wrong”. A task may seem insurmountable and
 daunting when we do not break it down into smaller manageable tasks; the average number of
 items a person has in working memory is between three and five items, with a tendency to think
-“What do I do next?” and consequently go off track. (Cowan, 2010)
+“What do I do next?” and consequently go off track[1].
 Therefore, the approach I propose to break down a task applied in MyTasker is to use five key
 components (5KP). These components are:
 
@@ -37,4 +37,4 @@ If you happen to have purchased this software, you have been scammed! You should
 References
 ----------
 
-Cowan, N., 2010. The Magical Mystery Four: How is Working Memory Capacity Limited, and Why?. (Found in PMC 2010, 1 February, pp. 51-57.)
+[1]. Cowan, N., 2010. The Magical Mystery Four: How is Working Memory Capacity Limited, and Why?. (Found in PMC 2010, 1 February, pp. 51-57.)
